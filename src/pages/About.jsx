@@ -10,7 +10,7 @@ const About = () => {
           <p className="card-text  fs-3">
             This blog has been developed by <br />{" "}
             <span className="fw-bolder">Hasan Turkel</span> <br /> who is a
-            front-end developer.
+            full-stack developer.
           </p>
           <hr />
           <h4 >For Contact</h4>
