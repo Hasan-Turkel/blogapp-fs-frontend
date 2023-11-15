@@ -44,7 +44,9 @@ const Detail = () => {
  
   
 
-  const like = data?.likes_n?.filter((item=> item.user_id==user?.id)).length&&"text-danger"
+  const like = data?.likes_n?.filter((item=> item.user_id==user?._id)).length&&"text-danger"
+
+  console.log(user);
   return (
     <div className="container d-flex flex-column mt-5 m-auto gap-2 ">
       <img src={data.image} className="card-img-top detail-img" alt={data.title} />
