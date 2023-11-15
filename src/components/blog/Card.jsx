@@ -24,7 +24,7 @@ const Card = ({
   const { user } = useSelector((state) => state.auth);
   const { likeUnlike } = useBlogCalls();
   const like =
-    likes_n?.filter((item) => item.user_id == user?.id).length && "text-danger";
+    likes_n?.filter((item) => item.user_id == user?._id).length && "text-danger";
   // console.log(like);
   
   const handleClick = () => {
