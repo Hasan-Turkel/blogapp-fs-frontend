@@ -21,7 +21,7 @@ const Detail = () => {
   const [data, setData] = useState([]);
   const getDetailCard = async () => {
     try {
-      const { data } = await axiosWithToken(`api/blogs/${id}/`, 
+      const { data } = await axiosWithToken(`/api/blogs/${id}/`, 
       );
       setData(data);
       // console.log(data.id);

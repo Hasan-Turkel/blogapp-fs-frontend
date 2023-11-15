@@ -11,7 +11,7 @@ const useBlogCalls = () => {
   const likeUnlike = async (id) => {
     dispatch(fetchStart());
     try {
-        const { data } = await axiosWithToken.post(`api/likes/${id}/`,1,
+        const { data } = await axiosWithToken.post(`/api/likes/${id}/`,1,
         );
       
       // console.log(data);
@@ -30,7 +30,7 @@ const useBlogCalls = () => {
   const delBlog = async (id) => {
    
     try {
-        const { data } = await axiosWithToken.delete(`api/blogs/${id}/`,
+        const { data } = await axiosWithToken.delete(`/api/blogs/${id}/`,
     );
       toastSuccessNotify("The blog has been deleted.")
       navigate(-1)
@@ -47,7 +47,7 @@ const useBlogCalls = () => {
   const updateBlog = async (values) => {
    
     try {
-        const { data } = await axiosWithToken.put(`api/blogs/${values.id}/`,values,
+        const { data } = await axiosWithToken.put(`/api/blogs/${values.id}/`,values,
         );
       toastSuccessNotify("The blog has been updated.")
      
@@ -65,7 +65,7 @@ const useBlogCalls = () => {
   const sendComment = async (values, id) => {
 
     try {
-      const { data } = await axiosWithToken.post(`api/comments/${id}/`, values 
+      const { data } = await axiosWithToken.post(`/api/comments/${id}/`, values 
      );
       toastSuccessNotify("Comment has been sent.")
       console.log(data);
@@ -78,7 +78,7 @@ const useBlogCalls = () => {
   const sendBlog = async (values) => {
 
     try {
-      const { data } = await axiosWithToken.post(`api/blogs/`, values, 
+      const { data } = await axiosWithToken.post(`/api/blogs/`, values, 
       );
       toastSuccessNotify("The blog has been created.")
       navigate("/my-blogs")

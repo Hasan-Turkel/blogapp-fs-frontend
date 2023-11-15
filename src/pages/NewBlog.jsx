@@ -11,7 +11,7 @@ const NewBlog = () => {
   const getCat = async () => {
     try {
       const { data } = await axios(
-        `${import.meta.env.VITE_BASE_URL}api/categories/`
+        `${import.meta.env.VITE_BASE_URL}/api/categories/`
       );
       setCat(data);
       console.log(data);

@@ -13,7 +13,7 @@ const MyBlogs = () => {
   const [data, setData] = useState([]);
   const getMyBlogs = async () => {
     try {
-      const { data } = await axiosWithToken(`api/blogs?author=${user.id}`);
+      const { data } = await axiosWithToken(`/api/blogs?author=${user.id}`);
       setData(data);
       // console.log(data);
     } catch (error) {

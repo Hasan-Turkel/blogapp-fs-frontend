@@ -12,7 +12,7 @@ const UpdateModal = ({ data, id, getDetailCard }) => {
 
   const getCat = async () => {
     try {
-      const { data } = await axios(`${import.meta.env.VITE_BASE_URL}api/categories/`);
+      const { data } = await axios(`${import.meta.env.VITE_BASE_URL}/api/categories/`);
       setCat(data);
       // console.log(data);
     } catch (error) {

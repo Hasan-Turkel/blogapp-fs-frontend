@@ -11,7 +11,7 @@ const useAuthCalls = () => {
   const login = async (values) => {
     dispatch(fetchStart());
     try {
-      const { data } = await axios.post(`${BASE_URL}users/auth/login/`, values);
+      const { data } = await axios.post(`${BASE_URL}/users/auth/login/`, values);
       dispatch(loginSuccess(data));
       toastSuccessNotify("Login performed.")
       navigate("/");
@@ -26,7 +26,7 @@ const useAuthCalls = () => {
   const register = async (values) => {
     dispatch(fetchStart());
     try {
-      const { data } = await axios.post(`${BASE_URL}users/auth/register/`, values);
+      const { data } = await axios.post(`${BASE_URL}/users/auth/register/`, values);
       dispatch(registerSuccess(data));
       toastSuccessNotify("Register performed.")
       navigate("/");
@@ -40,7 +40,7 @@ const useAuthCalls = () => {
   const logout = async () => {
     dispatch(fetchStart());
     try {
-      await axios.post(`${BASE_URL}users/auth/logout/`);
+      await axios.post(`${BASE_URL}/users/auth/logout/`);
       dispatch(logoutSuccess());
       toastSuccessNotify("Logout performed.")
       navigate("/");
