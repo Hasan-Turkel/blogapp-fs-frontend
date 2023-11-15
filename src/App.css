@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer{
+    background-color: rgb(172, 233, 235);
+    /* position: fixed;
+    bottom: 0; */
+}
+li{
+    list-style-type: none;
+}
+.navbar{
+    padding-right: 60px;
+    background-color:rgb(172, 233, 235);
+    width: 100%;
+
+}
+.auth-form{
+    max-width: 400px;
+    
+}
+.detail-img{
+    width: 250px;
+}
+.card-img{
+    object-fit:contain;
+}
+.textarea{
+    resize: none;
+    height: 100px;
+}
+.empty-div{
+    height: 10rem;
+}
+.profile-div{
+    height:60vh;
+}
