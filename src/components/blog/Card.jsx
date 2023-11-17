@@ -27,17 +27,17 @@ const Card = ({
     likes_n?.filter((item) => item.user_id == user?._id).length && "text-danger";
   // console.log(like);
   
-  const handleClick = () => {
-    if (user) {
-      likeUnlike(id);
-      setTimeout(() => {
-        getCard();
-      }, 1000);
-    } else {
-      toastWarnNotify("You must login first.");
-      navigate("/login");
-    }
-  };
+  // const handleClick = () => {
+  //   if (user) {
+  //     likeUnlike(id);
+  //     setTimeout(() => {
+  //       getCard();
+  //     }, 1000);
+  //   } else {
+  //     toastWarnNotify("You must login first.");
+  //     navigate("/login");
+  //   }
+  // };
 
 
 
@@ -59,8 +59,8 @@ const Card = ({
           <div className="d-flex align-items-center gap-2 ">
             <AiFillHeart
               className={"fs-4 " + like}
-              role="button"
-              onClick={handleClick}
+              // role="button"
+              // onClick={handleClick}
             />
             <span>{likes}</span>
             <BiComment className="fs-4" />
